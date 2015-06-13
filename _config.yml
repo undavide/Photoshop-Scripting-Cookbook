@@ -1,0 +1,13 @@
+# Site settings
+title: Photoshop Scripting Cookbook
+email: davide.barranca@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Collection of Scripts for Adobe Photoshop
+baseurl: "" # the subpath of your site, e.g. /blog/
+twitter_username: undavide
+github_username:  undavide
+
+# Build settings
+markdown: kramdown
+highlighter: pygments
+github: site.github.repository_url

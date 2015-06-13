@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+{% include head.html %}
+
+<body>
+	<div class="wrapper">
+		{% include navbar.html %}
+		<div class="container-fluid">
+			<div class="row-fluid row-offcanvas row-offcanvas-left">
+				<!-- sidebar -->
+				{% include sidebar.html %}
+
+				<!-- main area -->
+				<div class="col-xs-12 col-sm-9">
+					{{ content }}
+					<!-- {% include footer.html %} -->
+				</div>
+				<!-- /main area -->
+			</div>
+			<!-- /row-->
+		</div>
+		<!-- /page-content -->
+	</div>
+	<!-- wrapper -->
+	<!-- SCRIPTS -->
+	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+	<script src="js/material/ripples.min.js"></script>
+	<script src="js/material/material.min.js"></script>
+	<script>
+	$(document).ready(function() {
+		// This command is used to initialize some elements and make them work properly
+		$.material.init();
+		$('[data-toggle=offcanvas]').click(function() {
+			$('.row-offcanvas').toggleClass('active');
+		});
+	});
+	</script>
+</body>
+
+</html>
