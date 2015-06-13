@@ -6,12 +6,12 @@
 	<div class="wrapper">
 		{% include navbar.html %}
 		<div class="container-fluid">
-			<div class="row-fluid row-offcanvas row-offcanvas-left">
+			<div class="row row-offcanvas row-offcanvas-left">
 				<!-- sidebar -->
 				{% include sidebar.html %}
 
 				<!-- main area -->
-				<div class="col-xs-12 col-sm-9">
+				<div class="col-xs-12 col-sm-9" id="recipe">
 					{{ content }}
 					<!-- {% include footer.html %} -->
 				</div>
@@ -33,6 +33,8 @@
 		$.material.init();
 		$('[data-toggle=offcanvas]').click(function() {
 			$('.row-offcanvas').toggleClass('active');
+			// workaround to keep the correct z-shadow height
+			$('#sidebar').css('height', $('#side-nav').height() + 'px');
 		});
 	});
 	</script>
