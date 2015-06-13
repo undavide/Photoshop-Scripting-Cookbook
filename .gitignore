@@ -1,4 +1,5 @@
 _site
 _libs
+.tutorial
 .sass-cache
 .jekyll-metadata
