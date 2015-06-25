@@ -17,7 +17,8 @@ alert( $.getenv("USERNAME") ); // Davide
 ## Discussion
 The available arguments of the `getenv` call depend on the platform, for the lists read along.
 
-### Mac 
+#### Mac
+
 Open the Terminal and type `printenv`, the records (populated with your own data) will be:
 {% highlight console %}
 TERM_PROGRAM
@@ -44,7 +45,8 @@ SECURITYSESSIONID
 OLDPWD
 {% endhighlight %}
 
-### PC 
+#### PC
+
 Open the Command Prompt and type `set`, the records (populated with your own data) will be:
 {% highlight console %}
 ALLUSERSPROFILE
@@ -87,4 +89,5 @@ windir
 
 ### References
 Credits: AA.VV.
+
 Link: not provided.

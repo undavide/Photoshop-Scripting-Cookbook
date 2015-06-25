@@ -8,6 +8,6 @@ twitter_username: undavide
 github_username:  undavide
 
 # Build settings
-markdown: redcarpet
-pygments: true
+markdown: kramdown
+highlighter: pygments
 github: site.github.repository_url
