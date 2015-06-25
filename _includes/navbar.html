@@ -1,13 +1,18 @@
 <!-- top navbar -->
+
 <div class="navbar navbar-default navbar-fixed-top shadow-z-2" role="navigation">
-		<div class="container-fluid">
-				<div class="navbar-header">
-						<button type="button" class="navbar-toggle" data-toggle="offcanvas" data-target=".sidebar-nav">
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-								<span class="icon-bar"></span>
-						</button>
-						<a class="navbar-brand" href="#">Project Name</a>
-				</div>
+	<div class="container-fluid">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<!-- <span class="glyphicon glyphicon glyphicon-folder-open" aria-hidden="true" style="padding-right:15px;"></span> -->
+			<a class="navbar-brand" href="{{ site.baseurl }}/"><span class="mdi-file-folder-open"></span>{{ site.title }}</a>
 		</div>
+		<form class="navbar-form pull-right hidden-xs">
+			<input type="text" class="form-control col-lg-8" placeholder="Search">
+		</form>
+	</div>
 </div>

@@ -4,15 +4,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
     <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
-    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <link type="image/x-icon" rel="shortcut icon" href="{{ site.baseurl }}/favicon.ico">
+    <link rel="apple-touch-icon" href="{{ site.baseurl }}/apple-touch-icon.png">
     <!-- Place favicon.ico in the root directory -->
 
 
 	<link href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
 	<!-- Include roboto.css to use the Roboto web font, material.css to include the theme and ripples.css to style the ripple effect -->
-	<link href="css/material/roboto.min.css" rel="stylesheet">
-	<link href="css/material/material.min.css" rel="stylesheet">
-	<link href="css/material/ripples.min.css" rel="stylesheet">
+	<link href="{{ site.baseurl }}/css/material/roboto.min.css" rel="stylesheet">
+	<link href="{{ site.baseurl }}/css/material/material.min.css" rel="stylesheet">
+	<link href="{{ site.baseurl }}/css/material/ripples.min.css" rel="stylesheet">
 
     <link rel="stylesheet" href="{{ " /css/main.css " | prepend: site.baseurl }}">
 

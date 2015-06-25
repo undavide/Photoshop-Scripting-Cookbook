@@ -3,40 +3,38 @@
 {% include head.html %}
 
 <body>
-	<div class="wrapper">
-		{% include navbar.html %}
-		<div class="container-fluid">
-			<div class="row row-offcanvas row-offcanvas-left">
-				<!-- sidebar -->
-				{% include sidebar.html %}
-
-				<!-- main area -->
-				<div class="col-xs-12 col-sm-9" id="recipe">
-					{{ content }}
-					<!-- {% include footer.html %} -->
-				</div>
-				<!-- /main area -->
-			</div>
-			<!-- /row-->
+	{% include navbar.html %}
+	<div id="wrapper">
+		<!-- Sidebar -->
+		<div id="sidebar-wrapper" class="shadow-z-1" role="navigation">
+			{% include sidebar.html %}
 		</div>
-		<!-- /page-content -->
+		<div id="page-content-wrapper">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-lg-9">
+						{{ content }}
+						{% include footer.html %}
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
-	<!-- wrapper -->
 	<!-- SCRIPTS -->
 	<script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-	<script src="js/material/ripples.min.js"></script>
-	<script src="js/material/material.min.js"></script>
+	<script src="{{ site.baseurl }}/js/material/ripples.min.js"></script>
+	<script src="{{ site.baseurl }}/js/material/material.min.js"></script>
 	<script>
-	$(document).ready(function() {
-		// This command is used to initialize some elements and make them work properly
-		$.material.init();
-		$('[data-toggle=offcanvas]').click(function() {
-			$('.row-offcanvas').toggleClass('active');
-			// workaround to keep the correct z-shadow height
-			$('#sidebar').css('height', $('#side-nav').height() + 'px');
+		$(document).ready(function() {
+			// This command is used to initialize some elements and make them work properly
+			$.material.init();
+			// $("#menu-toggle").click(function(e) {
+			$(".navbar-toggle").click(function(e) {
+				e.preventDefault();
+				$("#wrapper").toggleClass("toggled");
+			});
 		});
-	});
 	</script>
 </body>
 

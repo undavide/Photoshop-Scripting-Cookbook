@@ -1,0 +1,45 @@
+---
+layout: default
+title: Cookbook
+chapters:
+- Syntax
+- Classes and Objects
+- Strings
+- Arrays
+- Dates and Times
+- Math
+- Functions
+- Metaprogramming
+- jQuery
+- Ajax
+- Regular Expressions
+- Networking
+- Design Patterns
+- Databases
+- Testing
+---
+
+<article class="content-block">
+
+  <h5 class="sidebar-title">Chapters</h5>
+
+  <ol class="navigation chapters-list">
+    {% for chapter in page.chapters %}
+      {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+      {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+      <li class="chapter">
+        <h4><a class="chapter-title" href="{{ site.baseurl }}{{ url }}">{{ chapter }}</a></h4>
+        <ul class="pseudo-list recipes-list">
+          {% for page in site.pages %}
+            {% if page.url contains url %}
+              {% unless page.url == indexurl %}
+                <li class="list-item recipe"><a class="recipe-title" href="{{ site.baseurl }}{{ page.url | replace: '.html', '' }}">{{ page.title }}</a></li>
+              {% endunless %}
+            {% endif %}
+          {% endfor %}
+        </ul>
+      </li>
+    {% endfor %}
+  </ol>
+
+</article>
