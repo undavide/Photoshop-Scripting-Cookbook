@@ -2,7 +2,7 @@
 layout: default
 ---
 
-{% capture url %}/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+{% capture url %}/chapters/{{ page.chapter | replace: ' ', '-' | downcase }}{% endcapture %}
 {% capture indexurl %}{{ url }}/index.html{% endcapture %}
 
 <div class="chapter-wrapper">
