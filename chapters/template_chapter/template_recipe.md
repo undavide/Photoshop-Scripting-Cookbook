@@ -7,6 +7,8 @@ Use this text as a start.
 
 ## Problem
 
+{% gist c1849b3ff918a7d4c32b %}
+
 You have a problem.
 
 ## Solution
