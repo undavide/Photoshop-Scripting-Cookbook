@@ -2,4 +2,19 @@
 layout: default
 ---
 
-{{ content }}
+{% capture url %}/chapters/{{ page.chapter | replace: ' ', '_' | downcase }}{% endcapture %}
+{% capture indexurl %}{{ url }}/index.html{% endcapture %}
+
+<div class="chapter-wrapper">
+	<h1>{{page.title}}</h1>
+	<p>{{page.description}}</p>
+	<ul>
+	{% for page in site.pages %}
+	  {% if page.url contains url %}
+	    {% unless page.url == indexurl %}
+	  <li><a href="{{ site.baseurl }}{{ page.url}}">{{ page.title }}</a></li>
+	    {% endunless %}
+	  {% endif %}
+	{% endfor %}
+	</ul>	
+</div>

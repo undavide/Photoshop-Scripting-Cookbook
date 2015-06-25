@@ -1,30 +1,10 @@
-<!-- http://ironsummitmedia.github.io/startbootstrap-simple-sidebar/ -->
-<!-- http://seegatesite.com/bootstrap/simple_sidebar_menu.html -->
-
-<!-- <section class="sidebar-block">
-    {% include copy.html %}
-    <h5 class="sidebar-title">Chapters Index</h5>
-    <ol class="navigation chapters-list">
-        {% for chapter in site.data.arguments%} {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %} {% capture indexurl %}{{ url }}/index.html{% endcapture %}
-        <li class="chapter">
-            <div class="sidebar-subtitle{% if page.url == indexurl %} page-active{% endif %}"><strong><a class="chapter-title" href="{{ site.baseurl }}{{ url }}">{{ chapter }}</a></strong></div>
-            <ul class="pseudo-list recipes-list">
-                {% for site_page in site.pages %} {% if site_page.url contains url %} {% unless site_page.url == indexurl %}
-                <li class="list-item recipe{% if page.url == site_page.url %} page-active{% endif %}"><a class="recipe-title" href="{{ site.baseurl }}{{ site_page.url }}">{{ site_page.title }}</a></li>
-                {% endunless %} {% endif %} {% endfor %}
-            </ul>
-        </li>
-        {% endfor %}
-    </ol>
-</section> -->
-
 <section class="sidebar-block">
     {% include copy.html %}
     <hr style="height: 6px; border: 0; box-shadow: inset 0 6px 6px -6px rgba(0, 0, 0, 0.3); margin:0">
     <h5 class="sidebar-title">Chapters Index</h5>
     <ol class="navigation chapters-list">
 
-        {% for chapter in site.data.arguments %} {% capture url %}/chapters/{{ chapter | replace: ' ', '_' | downcase }}{% endcapture %} {% capture indexurl %}{{ url }}/index.html{% endcapture %}
+        {% for chapter in site.data.arguments %} {% capture url %}/chapters/{{ chapter | replace: ' ', '-' | downcase }}{% endcapture %} {% capture indexurl %}{{ url }}/index.html{% endcapture %}
         <li class="chapter">
             <div class="sidebar-subtitle{% if page.url == indexurl %} page-active{% endif %}"><strong><a class="chapter-title" href="{{ site.baseurl }}{{ url }}">{{ chapter }}</a></strong></div>
             <ul class="pseudo-list recipes-list">
