@@ -3,7 +3,7 @@ title: Photoshop Scripting Cookbook
 email: davide.barranca@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
   Collection of Scripts for Adobe Photoshop
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/Photoshop-Scripting-Cookbook" # the subpath of your site, e.g. /blog/
 twitter_username: undavide
 github_username:  undavide
 
